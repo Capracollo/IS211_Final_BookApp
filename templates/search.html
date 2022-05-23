@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+        background-color: linen;
+        text-align: center;
+    }
+    h1 {
+        color: maroon;
+    }
+    .backbutton {
+        display: inline-block;
+        height: 30px;
+        width: 250px;
+    }
+    .submitbutton {
+        height: 30px;
+        width: 250px;
+    }
+    .searchbutton{
+        height: 30px;
+        width: 75px;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Search for a Book</title>
+</head>
+<body>
+    {% block content %}
+    <br/><br/>
+        <div>
+            <h1>SEARCH FOR A BOOK ISBN!</h1>
+            <br/><br/>
+            <h4>Go check out Google Books for a valid ISBN (The ISBN listed second seems to work best)</h4>
+            <form action="/search" METHOD="POST">
+                <input type="text" placeholder="ISBN" name="ISBN">
+                <input class="searchbutton" type="submit" value="Search">
+            </form>
+        </div>
+    <br/><br/>
+        <div>
+            <h4>{{ sentence }}</h4>
+            <h4>{{ error }}</h4>
+    <br/><br/>
+            <form action="/addbook" METHOD="POST">
+                <input class="submitbutton" type="submit" value="Add this book to My Book Collection" name="add">
+            </form>
+        </div>
+        <br/><br/>
+        <a class="backbutton" href="/dashboard">Back to My Book Collection</a>
+    {% endblock %}
+
+</body>
+</html>

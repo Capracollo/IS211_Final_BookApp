@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+        background-color: linen;
+        text-align: center;
+    }
+    h1 {
+        color: maroon;
+    }
+    .submitbutton {
+        height: 30px;
+        width: 75px;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    {% block content %}
+        <div>
+            <h1>Please Log In!</h1>
+            <br/><br/>
+            <form action="/" METHOD="POST">
+                <input type="text" placeholder="User ID" name="userid">
+                <input type="text" placeholder="Password" name="password">
+                <input class="submitbutton" type="submit" value="Submit">
+            </form>
+            <h4>(try using admin for username and password for password :O)</h4>
+        </div>
+    {% endblock %}
+</body>
+</html>
