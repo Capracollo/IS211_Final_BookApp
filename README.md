@@ -1,4 +1,4 @@
-# IS211_FinalProjectBookApp
+# IS211_FinalProject_BookApp
 
 I chose to do the book application, and decided to break down my app into:
 displaying books, searching books, adding books, and deleting books.
